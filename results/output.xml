@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20231206 21:14:39.358" rpa="false" schemaversion="3">
+<suite id="s1" name="Nuclone-Appium-Robot" source="C:\Iterasys\nuclone-appium-robot">
+<suite id="s1-s1" name="Balance" source="C:\Iterasys\nuclone-appium-robot\balance.robot">
+<test id="s1-s1-t1" name="Show My Balance" line="5">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub/</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Maestro-Pixel-3</arg>
+<arg>app=${EXECDIR}/app/nuclone.apk</arg>
+<arg>udid=emulator-5554</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20231206 21:14:41.617" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20231206 21:14:41.617" endtime="20231206 21:14:41.621"/>
+</kw>
+<msg timestamp="20231206 21:14:41.622" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20231206 21:14:41.625" level="FAIL">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</msg>
+<status status="FAIL" starttime="20231206 21:14:39.570" endtime="20231206 21:14:41.627"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=card-hero</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20231206 21:14:41.627" endtime="20231206 21:14:41.627"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=show-balance</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231206 21:14:41.628" endtime="20231206 21:14:41.628"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=user-balance</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20231206 21:14:41.629" endtime="20231206 21:14:41.629"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>accessibility_id=user-balance</arg>
+<arg>R$ 5.500,00</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20231206 21:14:41.629" endtime="20231206 21:14:41.630"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="NOT RUN" starttime="20231206 21:14:41.630" endtime="20231206 21:14:41.630"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="NOT RUN" starttime="20231206 21:14:41.630" endtime="20231206 21:14:41.630"/>
+</kw>
+<status status="FAIL" starttime="20231206 21:14:39.569" endtime="20231206 21:14:41.631">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</status>
+</test>
+<status status="FAIL" starttime="20231206 21:14:39.387" endtime="20231206 21:14:41.633"/>
+</suite>
+<status status="FAIL" starttime="20231206 21:14:39.363" endtime="20231206 21:14:41.635"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Nuclone-Appium-Robot">Nuclone-Appium-Robot</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Balance">Nuclone-Appium-Robot.Balance</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231206 21:14:41.622" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
