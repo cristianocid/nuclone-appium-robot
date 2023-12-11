@@ -3,12 +3,12 @@ Library     AppiumLibrary
 
 ***Test Cases***
 Show My Balance
-    Open Application    http://localhost:4723/wd/hub/
+    Open Application    http://localhost:4723/wd/hub
     ...                 automationName=UiAutomator2
+    ...                 platformVersion=8.1
     ...                 platformName=Android
-    ...                 deviceName=Maestro-Pixel-3
+    ...                 deviceName=emulator-5554
     ...                 app=${EXECDIR}/app/nuclone.apk
-    ...                 udid=emulator-5554
 
     Wait Until Element Is Visible   accessibility_id=card-hero      10
 
